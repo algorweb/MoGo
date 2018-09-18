@@ -1,0 +1,9 @@
+.quote
+	.quote_slider
+		each val in quoteSliderArray
+			.quote_item
+				.quote_i-wrp
+					img.quote_img(src= val.img width='150' height='150')
+				.quote_info
+					p.quote_text= val.text
+					.quote_sign= val.xsign
