@@ -1,0 +1,16 @@
+.ourteam
+	+gl_title('Who we are', 'Meet our team','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+	.ourteam_items
+		each val in ourteamArray
+			.ourteam_item
+				.ourteam_hover
+					.ourteam_i_wrp
+						img.ourteam_img(src= val.img)
+					.ourteam_block-before
+						ul.ourteam_soc-items
+							li.ourteam_soc-facebook
+							li.ourteam_soc-twitter
+							li.ourteam_soc-pinterest
+							li.ourteam_soc-instagram
+				.ourteam_name= val.name
+				.ourteam_profession= val.profession
