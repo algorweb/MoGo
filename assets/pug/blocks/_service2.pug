@@ -4,3 +4,7 @@ section.service2
 		.service2_img-wrp
 			img.service2_img(src='i/service.jpg' width='595' height='397')
 		.service2_accordion
+			each val in services2AccordionArray
+				button.accordion= val.title
+				.panel
+					p= val.text

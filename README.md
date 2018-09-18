@@ -1,4 +1,4 @@
-# Welcome to glivera-team-template
+# Welcome
 
 ## Get started
 1. Install [node.js](https://nodejs.org/),[python(2 version)](https://www.python.org/downloads/release/python-2710/),[Microsoft Visual Studio C++ 2013](https://www.microsoft.com/en-gb/download/details.aspx?id=44914) and gulp globally
