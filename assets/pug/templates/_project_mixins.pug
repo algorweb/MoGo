@@ -1,0 +1,39 @@
+mixin header
+	header.header
+		.container
+			.header-top
+				.header-top_logo
+					h1.header-top_text Mogo
+				nav.header-top_nav
+					+menu(headerMenuArray)
+				.header-top_shop
+					.header-top_icon
+						+icon('basket')
+					.header-top_icon
+						+icon('search')
+			.header-bottom
+				.head-slider
+					each val in headerSliderArray
+						+slider_item(val.text_top, val.text_bottom, val.text_btn)
+
+mixin footer
+	footer.footer
+
+mixin slider_item(text_top, text_bottom, text_btn)
+	- text_top = text_top || ''
+	- text_bottom = text_bottom || ''
+	- text_btn = text_btn || ''
+	.head-slider_item
+		h2.head-slider_text-top= text_top
+		h2.head-slider_text-bottom= text_bottom
+		a.head-slider_btn= text_btn
+
+mixin gl_title(text_top, text_mid, text_caption)
+	- text_top = text_top || ''
+	- text_mid = text_mid || ''
+	- text_caption = text_caption || ''
+	.title_section
+		span.title_top= text_top
+		h2.title_mid= text_mid
+		if text_caption
+			p.title_caption= text_caption

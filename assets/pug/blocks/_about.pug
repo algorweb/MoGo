@@ -1,0 +1,12 @@
+section.about
+	+gl_title('What we do', 'Story about us', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do')
+	ul.about_items
+		each val in aboutItemsArray
+			li.about_item
+				.about_img-wrp
+					img.about_img(src= val.img_url width='380' height='250')
+				.about_blk-hover
+						.about_icon
+							+icon(val.icon_name)
+						.about_text= val.text
+

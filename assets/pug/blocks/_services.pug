@@ -1,0 +1,7 @@
+section.services
+	+gl_title('We work with', 'Amazing Services')
+	ul.services_items
+		each val in servicesItemsArray
+			li.services_item
+				h3.services_title= val.title
+				p.services_text= val.text
