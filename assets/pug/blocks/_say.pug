@@ -1,0 +1,11 @@
+section.say
+	+gl_title('Happy Clients', 'What people say')
+	.say_items
+		each val in peopleSayArray
+			.say_item
+				.say_img_wrp
+					img.say_img(src= val.img width='110' height='110')
+				.say_info
+					.say_name= val.name
+					.say_prof= val.prof
+					.say_text= val.text

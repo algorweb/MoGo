@@ -37,3 +37,15 @@ mixin gl_title(text_top, text_mid, text_caption)
 		h2.title_mid= text_mid
 		if text_caption
 			p.title_caption= text_caption
+
+mixin slide_testimonials(comeArray, classPrefix)
+	- classPrefix = classPrefix || ''
+	section(class= `${classPrefix}`)
+		div(class= `${classPrefix}_slider`)
+			each val in comeArray
+				div(class= `${classPrefix}_item`)
+					div(class= `${classPrefix}_i-wrp`)
+						img(class= `${classPrefix}_img` src= val.img width='150' height='150')
+					div(class=`${classPrefix}_info`)
+						p(class= `${classPrefix}_text`)= val.text
+						div(class =`${classPrefix}_sign`)= val.xsign
