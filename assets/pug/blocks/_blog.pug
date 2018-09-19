@@ -1,0 +1,14 @@
+section.blog
+	+gl_title('Our stories', 'Latest blog')
+	.blog_items
+		each val in blogArray
+			.blog_item
+				.blog_img_wrp
+					img.blog_img(src= val.img width='' height='')
+					.blog_day= val.day
+					.blog_month= val.month
+				.blog_title= val.title
+				.blog_text= val.text
+				.blog_soc
+					.blog_view= val.view
+					.blog_comments= val.comments
