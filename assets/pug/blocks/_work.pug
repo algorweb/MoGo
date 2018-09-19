@@ -1,0 +1,12 @@
+.work
+	+gl_title('What we do', 'some of our work', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+	.work_items
+		each val in worksArray
+			.work_item
+				.work_i_wrp
+					img.work_img(src= val.img)
+				.work_hover
+					.work_picture
+						+icon( val.icon )
+					.work_title= val.title
+					.work_text= val.text
