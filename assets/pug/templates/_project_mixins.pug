@@ -18,6 +18,36 @@ mixin header
 
 mixin footer
 	footer.footer
+		.footer-left
+			.footer-left_logo Mogo
+			.footer-left_text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			a.footer-left_followers(href='#') <strong>15k</strong> followers
+			.footer-left_soc
+				span.footer-left_desc
+				ul.footer-left_items
+					each val in footerSocArray
+						li.footer-left_item
+							a.footer-left_ref.footer-left_facebook(href= val.ref)= val.name
+			form.footer-left_form
+				input.footer-left_subscribe
+				button.footer-left_btn
+		.footer-centr
+			.footer-centr_title Blogs
+			ul.footer-centr_items
+				each val in footerBlogArray
+					li.footer-centr_item
+						.footer-centr_img_wrp
+							img.footer-centr_img(src= val.img width='119' height='79')
+						a.footer-centr_ref(src= val.ref)= val.ref_text
+						.footer-centr_data= val.data
+		.footer-right
+			.footer-right_title Instagram
+			ul.footer-right_items
+				each val in footerInstagramArray
+					li.footer-right_item
+						a.footer-right_link(href= val.ref)
+							img.footer-right_img(src= val.img width='88' height='88')
+			a.footer-right_more(href='#') View more photos
 
 mixin slider_item(text_top, text_bottom, text_btn)
 	- text_top = text_top || ''
